@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", sans-serif;
+  
+  /* Brand Colors */
+  --color-brand-pink: #ffd6e0;
+  --color-brand-cream: #fdfaf6;
+  --color-brand-red: #ff4d6d;
+  --color-brand-white: #ffffff;
+  --color-brand-dark: #2d2a32;
+  
+  /* Layout utilities */
+  --spacing-128: 32rem;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-brand-cream)] text-[var(--color-brand-dark)] antialiased selection:bg-brand-pink/50;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/40 backdrop-blur-md border border-white/50 shadow-xl;
+  }
+  .glass-dark {
+    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl;
+  }
+}
